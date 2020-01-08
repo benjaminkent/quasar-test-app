@@ -1,22 +1,20 @@
 <template>
   <q-page-container>
     <q-layout>
-      <q-toolbar class="bg-blue-1 q-pa-md q-pl-xl q-pr-xl">
+      <q-toolbar class="bg-blue-1 q-pa-md">
         <q-toolbar-title>My To Do List</q-toolbar-title>
         <q-space />
         <q-btn @click="addTodo = true" label="Add" icon-right="playlist_add" flat />
       </q-toolbar>
 
       <q-list v-if="toDos.length > 0" padding>
-        <q-item
-          tag="label"
-          v-for="(todo, index) in toDos"
-          :key="index"
-          v-ripple
-          class="q-pl-xl q-pr-xl"
-        >
+        <q-item tag="label" v-for="(todo, index) in toDos" :key="index" v-ripple>
           <q-item-section>
-            <q-item-label :class="todo.completed ? 'completed' : ''">{{ todo.action }}</q-item-label>
+            <q-item-label :class="todo.completed ? 'completed' : ''">
+              {{
+              todo.action
+              }}
+            </q-item-label>
           </q-item-section>
           <q-item-section side>
             <q-toggle v-model="todo.completed" color="blue" icon="done" />
