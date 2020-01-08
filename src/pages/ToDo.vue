@@ -4,16 +4,24 @@
       <q-toolbar class="bg-blue-1 q-pa-md">
         <q-toolbar-title>My To Do List</q-toolbar-title>
         <q-space />
-        <q-btn @click="addTodo = true" label="Add" icon-right="playlist_add" flat />
+        <q-btn
+          @click="addTodo = true"
+          label="Add"
+          icon-right="playlist_add"
+          flat
+        />
       </q-toolbar>
 
       <q-list v-if="toDos.length > 0" padding>
-        <q-item tag="label" v-for="(todo, index) in toDos" :key="index" v-ripple>
+        <q-item
+          tag="label"
+          v-for="(todo, index) in toDos"
+          :key="index"
+          v-ripple
+        >
           <q-item-section>
             <q-item-label :class="todo.completed ? 'completed' : ''">
-              {{
-              todo.action
-              }}
+              {{ todo.action }}
             </q-item-label>
           </q-item-section>
           <q-item-section side>
@@ -32,12 +40,23 @@
           </q-card-section>
 
           <q-card-section>
-            <q-input v-model="enteredTodo" @keyup.enter="addNewTodo" dense autofocus />
+            <q-input
+              v-model="enteredTodo"
+              @keyup.enter="addNewTodo"
+              dense
+              autofocus
+            />
           </q-card-section>
 
           <q-card-actions align="right">
             <q-btn @click="cancel" label="Cancel" color="grey-4" outline />
-            <q-btn @click="addNewTodo" label="Add To Do" color="primary" glossy unelevated />
+            <q-btn
+              @click="addNewTodo"
+              label="Add To Do"
+              color="primary"
+              glossy
+              unelevated
+            />
           </q-card-actions>
         </q-card>
       </q-dialog>
