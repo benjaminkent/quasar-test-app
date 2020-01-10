@@ -1,8 +1,8 @@
 <template>
   <q-page-container>
     <q-layout>
-      <q-toolbar class="bg-blue-1 q-pa-md">
-        <q-toolbar-title>My To Do List</q-toolbar-title>
+      <q-toolbar class="bg-deep-purple-2 q-pa-md">
+        <q-toolbar-title shrink>My To Do List</q-toolbar-title>
         <q-space />
         <q-btn
           @click="addTodo = true"
