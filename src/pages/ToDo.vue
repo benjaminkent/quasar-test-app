@@ -25,11 +25,7 @@
             }}</q-item-label>
           </q-item-section>
           <q-item-section side>
-            <q-toggle
-              v-model="todo.completed"
-              color="deep-purple-12"
-              icon="done"
-            />
+            <q-toggle v-model="todo.completed" color="teal" icon="done" />
           </q-item-section>
         </q-item>
         <q-separator spaced />
@@ -48,7 +44,7 @@
               v-model="enteredTodo"
               @keyup.enter="addNewTodo"
               :rules="[val => !!val || 'Something to do is required']"
-              color="deep-purple-12"
+              color="teal"
               label="To do"
               filled
               square

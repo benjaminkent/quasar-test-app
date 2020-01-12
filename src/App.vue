@@ -3,7 +3,7 @@
     <q-layout view="hHr lpr fFr">
       <q-header elevated class="bg-deep-purple-12">
         <q-toolbar>
-          <q-toolbar-title>First Quasar App!</q-toolbar-title>
+          <q-toolbar-title>Q To Do App</q-toolbar-title>
           <q-space />
           <q-btn @click="drawer = !drawer" icon="menu" round flat dense />
         </q-toolbar>
