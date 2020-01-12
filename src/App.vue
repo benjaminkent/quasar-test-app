@@ -42,7 +42,7 @@
         <q-img
           class="absolute-top"
           src="./assets/avatar-background.jpg"
-          style="height:150px"
+          style="height:175px"
         >
           <div class="absolute-bottom bg-transparent">
             <q-avatar size="65px" class="q-mb-sm">
